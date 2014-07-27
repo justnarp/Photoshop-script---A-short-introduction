@@ -21,7 +21,7 @@ Now, from Photoshop, go to File/Scripts/Browse… and locate your demo.jsx file.
 
 There are many things you can do like this directly with javascript, I suggest you use Google to investigate. For example, if you want to know how to move a layer, try googling for “Photoshop javascript move layer”.
 
-HOWEVER… this is also where things get both annoying and liberating at the same time, and is the key element of my hard earned lessons last night. The thing is, such a simple thing as moving a layer to, for example, x=100px, y=50px, is not so easy as it seems. Photoshop deals with something called translate, not move. So, translate basically lets you move a layer, relative to its current position. So now you start to need some math, which is kinda annoying. To place a layer at the above coordinates, based on the center of the layer, you need something like this:
+HOWEVER… this is also where things get both annoying and liberating at the same time, and is the key element of my hard earned lessons last night. The thing is, such a simple thing as moving a layer to, for example, `x=100px`, `y=50px`, is not so easy as it seems. Photoshop deals with something called translate, not move. So, translate basically lets you move a layer, relative to its current position. So now you start to need some math, which is kinda annoying. To place a layer at the above coordinates, based on the center of the layer, you need something like this:
 
 	positionLayerCenter("myText", 100, 50);
  
@@ -63,7 +63,7 @@ So, for example, if I in Photoshop select the “Background” layer, here’s t
     	desc96.putBoolean( idMkVs, false );
 	executeAction( idslct, desc96, DialogModes.NO );
 
-It’s not pretty code, no, but once you get the hang of it, you’ll find out how incredibly useful this is. Most of the time you can easily guess what’s going on, for example here, in line 2, you’ve “selected” something (slct). In line 7, you can see the layer you’ve selected, “Background”.
+It’s not pretty code, no, but once you get the hang of it, you’ll find out how incredibly useful this is. Most of the time you can easily guess what’s going on, for example here, in line 2, you’ve “selected” something (`slct`). In line 7, you can see the layer you’ve selected, `“Background”`.
 
 Now you can turn this into functions, and reuse it again and again. Simply add a function around the code, like this:
 
