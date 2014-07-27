@@ -1,4 +1,4 @@
-##Photoshop script - A short introduction
+###A short introduction to coding with JavaScript in Photoshop
 
 Scripting in Photoshop is easier than one might think. I learned the basics late last night, and today I made a script that updates a graph, complete with values, markers, x- and y-axis, curves and more. So here’s a few hints to get you started.
 
@@ -23,7 +23,7 @@ There are many things you can do like this directly with javascript, I suggest y
 
 HOWEVER… this is also where things get both annoying and liberating at the same time, and is the key element of my hard earned lessons last night. The thing is, such a simple thing as moving a layer to, for example, x=100px, y=50px, is not so easy as it seems. Photoshop deals with something called translate, not move. So, translate basically lets you move a layer, relative to its current position. So now you start to need some math, which is kinda annoying. To place a layer at the above coordinates, based on the center of the layer, you need something like this:
 
-positionLayerCenter("myText", 100, 50);
+	positionLayerCenter("myText", 100, 50);
  
 	function positionLayerCenter( lyr, x, y ){
     	var lyr1 = activeDocument.artLayers.getByName(lyr)
